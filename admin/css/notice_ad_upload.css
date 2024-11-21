@@ -1,0 +1,132 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+body {
+  font-family: "Noto Sans KR", "맑은 고딕", Arial, sans-serif;
+  font-size: 12px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.blind {
+  display: none;
+}
+
+.branch {
+  position: absolute;
+  left: 320px;
+  top: 26px;
+  left: 341px;
+  top: 28px;
+}
+
+body {
+  background: #eeeeee;
+}
+
+.gnb .now_link {
+  color: #adff00;
+}
+
+main {
+  width: calc(100% - 300px);
+  margin: 70px 0 0 300px;
+}
+main section {
+  width: 90%;
+  margin: 100px auto 30px;
+}
+main section h2 {
+  background: #333333;
+  color: #ffffff;
+  border-radius: 10px 10px 0 0;
+  height: 70px;
+  line-height: 70px;
+  font-size: 20px;
+  text-indent: 50px;
+  font-weight: bold;
+}
+main section .notice_wrap {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 50px;
+  border-radius: 0px 0px 10px 10px;
+  background: #ffffff;
+  font-size: 16px;
+}
+main section .notice_wrap p {
+  display: flex;
+  width: 100%;
+  align-items: normal;
+}
+main section .notice_wrap p label {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eeeeee;
+  border: 1px solid #cccccc;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+  margin-bottom: 10px;
+}
+main section .notice_wrap p input {
+  font-size: 16px;
+}
+main section .notice_wrap p input[type=text],
+main section .notice_wrap p textarea {
+  width: 80%;
+  margin-bottom: 10px;
+  padding: 15px;
+  border: 1px solid #cccccc;
+  border-radius: 0 5px 5px 0;
+  outline: none;
+}
+main section .notice_wrap p input:focus,
+main section .notice_wrap p textarea:focus {
+  box-shadow: 1px 1px 3px lightgray inset;
+}
+main section .notice_wrap p input[type=text] {
+  box-sizing: border-box;
+  height: 44px;
+}
+main section .notice_wrap p textarea {
+  height: 330px;
+  resize: none;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+main section .notice_wrap .notice_buttons {
+  text-align: center;
+  justify-content: center;
+}
+main section .notice_wrap .notice_buttons input {
+  border-radius: 5px;
+  width: 100%;
+  height: 50px;
+  font-weight: 600;
+  background: #333333;
+  color: #ffffff;
+  font-size: 16px;
+  border: none;
+  font-size: 20px;
+}
+main section .notice_wrap .notice_buttons a {
+  border-radius: 5px;
+  width: 100%;
+  height: 50px;
+  font-weight: 600;
+  background: #e5454c;
+  color: #ffffff;
+  font-size: 16px;
+  border: none;
+  line-height: 60px;
+  font-size: 20px;
+}
+main section .notice_wrap .notice_buttons input,
+main section .notice_wrap .notice_buttons a {
+  width: 200px;
+  height: 60px;
+  margin: 10px;
+}/*# sourceMappingURL=notice_ad_upload.css.map */

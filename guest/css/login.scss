@@ -1,0 +1,131 @@
+@import 'style';
+
+// 메인서식
+main{
+  .login{
+    width: 100%;
+    padding:$moblie_padding375;
+    box-sizing:border-box;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+
+    #mb_id,#mb_password{
+      @include btn100;
+      background-color: $dark_color_02;
+      border:$border;
+      color:$dark_color_07;
+      font-size:$font-size_14;
+      font-weight:400;
+      text-indent:30px;
+    }
+    .login_pw_box{
+      margin-top:8px;
+    }
+  }
+}
+
+.login_pw_box, .login_id_box{
+  position:relative;
+  .login_pwd, .login_id{
+    width:22px;
+    position:absolute;
+    top:14px;
+    left:8px;
+  }
+}
+
+.login_id_check{
+  color:$dark_color_05;
+  margin-top:8px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:$font_size_12;
+  #id_check{
+    width:16px;
+    height:16px;
+  }
+  label{
+    display:inline-block;
+    transform:translateY(-3px);
+  }
+  a{
+    display:inline-block;
+    height:18px;
+    color:$dark_color_05;
+  }
+  a:nth-child(1){
+    border-right:1px solid $dark_color_05;
+    padding-right:5px;
+  }
+  a:nth-child(2){
+    padding-left:3px;
+  }
+}
+
+.login_btn{
+  margin-top:30px;
+  #login_btn{
+    @include btn100;
+    border:none;
+    font-weight:bold;
+  }
+}
+
+.login_simplelogin{
+  margin-top:50px;
+  p:nth-child(1){
+    color:$dark_color_04;
+    text-align:center;
+    position:relative;
+    &::after{
+      content:'';
+      position:absolute;
+      width:38%;
+      height:1px;
+      background-color: $dark_color_04;
+      top:50%;
+      right:0;
+      transform:translateY(-50%);
+    }
+    &::before{
+      content:'';
+      position:absolute;
+      width:38%;
+      height:1px;
+      background-color: $dark_color_04;
+      left:0;
+      top:50%;
+      transform:translateY(-50%);
+    }
+  }
+  .login_simple_box{
+    display:flex;
+    justify-content:center;
+
+    img{
+      margin-top:30px;
+      width:56px;
+      margin-right:12px;
+    }
+    a{
+      display:block;
+    }
+    a:nth-child(3) img{
+      margin-right:0;
+    }
+  }
+}
+
+.join_us{
+  text-align: center;
+  margin: 40px auto 0;
+  p{
+    color: $dark_color_04;
+    margin: 0;
+  }
+  a{
+    color: $point_color;
+  }
+}

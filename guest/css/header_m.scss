@@ -1,0 +1,103 @@
+@import 'style';
+
+.t_header {
+  background: $main_color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  width: 100%;
+  box-shadow: $header_shadow;
+}
+//헤더 상단 로고
+.t_header h1{
+  width: 120px;
+  margin-left: 20px;
+}
+.t_header h1 img{
+  width: 100%;
+}
+
+// gnb 체크박스
+.t_header #gnb_btn{
+  display: none;
+}
+// gnb label
+.t_header .gnb_btn{
+  cursor: pointer;
+  margin: 6px 20px 0 0;;
+  width: 30px; height: 30px;
+}
+.t_header .gnb_btn img{
+  width: 26px; height: auto;
+}
+
+
+
+// gnb ul메뉴
+header #gnb{
+  color: $dark_color_07;
+  background: $main_color;
+  font-size: $font_size_18;
+  position: fixed;
+  top: 0px; right: 0;
+  width: 100%; height: 100vh;
+  box-shadow: -1px 0 3px $dark_color_02;
+  transition: 0.3s;
+}
+
+header #gnb li a{
+  display: block;
+border-bottom: 1px solid $dark_color_02;
+clear: both;
+height: 45px;
+line-height: 45px;
+padding: 0 20px;
+}
+header #gnb li a img{
+  display: block;
+  width: 30px; height: 30px;
+  float: right;
+  margin-top: 8px;
+}
+header #gnb .sub_mnu{
+  background: $dark_color_01;
+}
+header #gnb .sub_mnu a{
+  border-bottom: 1px solid $dark_color_03;
+}
+
+//gnb 상단로고
+header #gnb >li:first-child{
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 15px;
+height: 48px;
+}
+
+header #gnb h1 a{
+  border: none;
+  width: 120px;
+  padding-top: 4px;
+}
+header #gnb h1 img{
+  all: unset !important;
+  width: 100% !important;
+  height: auto !important;
+}
+//닫기버튼
+header #gnb .close_btn{
+  width: 30px; height: 30px;
+  cursor: pointer;
+  margin-right: 20px;
+  margin-top: 3px;
+}
+
+//꺽쇠회전
+header #gnb li a img{
+  transition: 0.3s;
+}
+.reverse{
+  transform: rotate(180deg);
+}

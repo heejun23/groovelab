@@ -1,0 +1,219 @@
+@import "style";
+
+#head p {
+  margin-bottom: 0;
+}
+
+#gnb,
+.sub_mnu {
+  padding-left: 0;
+}
+
+main {
+  padding: 28px 1.5rem;
+}
+.regi_form {
+  padding-bottom: 60px;
+  padding-top: 40px;
+}
+.sign_profile {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 20px;
+
+  .sign_profile_photo {
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .sign_image_upload {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+
+    img {
+      width: 30px;
+      height: 30px;
+      padding: 3px;
+      background: $main_color;
+      border-radius: 50%;
+      border: 2px solid $dark_color_07;
+      box-sizing: border-box;
+    }
+  }
+
+  #sign_profile_photo {
+    display: none;
+  }
+}
+
+.sign_input_form {
+  label {
+    color: $dark_color_07;
+    font-size: $font_size_12;
+  }
+
+  .sign_input_box {
+    position: relative;
+    margin-bottom: 16px;
+
+    img {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      left: 12px;
+      top: 14px;
+    }
+
+    input {
+      height: 45px;
+      background: $dark_color_02;
+      color: $dark_color_05;
+      font-size: $font_size_12;
+      border: $border;
+      padding: 0.375rem 0.75rem 0.375rem 2.188rem;
+      outline: none !important;
+      box-shadow: none !important;
+
+      &:focus {
+        background: $dark_color_02;
+        color: $dark_color_05;
+        border: $border;
+      }
+
+      &:active {
+        background: $dark_color_02;
+        color: $dark_color_05;
+        border: $border;
+      }
+
+      &::placeholder {
+        color: $dark_color_05;
+      }
+    }
+  }
+
+  .interest {
+    .d-flex {
+      justify-content: unset;
+      flex-wrap: wrap;
+    }
+    p {
+      margin-bottom: 10px;
+      color: $dark_color_07;
+      font-size: $font_size_12;
+    }
+
+    label {
+      @include btnSmall($dark_color_02, $dark_color_07);
+      padding: 0px 10px;
+      height: 34px;
+      line-height: 33px;
+      font-size: $font_size_14;
+      border: $border;
+      margin: 0px 6px 10px 0px;
+      cursor: pointer;
+    }
+
+    input {
+      display: none;
+    }
+    input:checked + label {
+      background: $danger_color;
+      border: 1px solid $danger_color;
+    }
+  }
+}
+
+//부트스트랩 유효성검사 색변경
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+  border-color: $point_color !important;
+  background-image: url(../images/warning.svg);
+}
+.form-control.is-valid,
+.was-validated .form-control:valid {
+  border-color: $dark_color_07 !important;
+  background-image: url(../images/valid_check.svg);
+}
+.valid-feedback {
+  color: $dark_color_07;
+}
+.invalid-feedback {
+  color: $point_color;
+}
+
+// 비밀번호 재설정 버튼
+.sign_pw_reset {
+  text-align: center;
+  line-height: 20px;
+  color: $dark_color_07;
+  margin: 50px 0;
+  a {
+    color: $point_color;
+    text-decoration: underline;
+  }
+}
+
+// 버튼
+.sign_submit_btn {
+  display: flex;
+  justify-content: space-between;
+  * {
+    width: 48%;
+  }
+  a {
+    @include btn100(transparent, $dark_color_07);
+    display: block;
+    border: 1px solid $dark_color_07;
+    margin-right: 8px;
+    text-align: center;
+    line-height: 48px;
+  }
+  input[type="submit"] {
+    @include btn100();
+  }
+}
+
+// f_gnb서식
+.f_gnb {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  box-shadow: $footer_shadow;
+  background-color: $main_color;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    li {
+      width: 20%;
+      color: $dark_color_07;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      a {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+      img {
+        width: 30px;
+      }
+    }
+  }
+}

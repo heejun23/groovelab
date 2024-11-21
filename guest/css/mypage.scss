@@ -1,0 +1,135 @@
+@import "style";
+
+.t_header{
+  display: none;
+}
+body {
+  background: $dark_color_06;
+}
+// 메인서식
+main {
+  width: 100%;
+  padding: $moblie_padding375;
+  height: 100%;
+  // padding-top: 48px;
+  box-sizing: border-box;
+.mypage{
+  padding-top: 45px;
+}
+  .mypage_logout {
+    text-align: right;
+    margin: 18px 0 22px;
+    a {
+      color: $danger_color;
+      font-size: $font_size_16;
+      font-weight: bold;
+    }
+  }
+
+  .mypage_profile {
+    position: relative;
+    width: 94px;
+    height: 94px;
+    margin: 0 auto 20px;
+
+    .mypage_profile_photo {
+      border-radius: 50%;
+      width: 94px;
+      height: 94px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .mypage_sign_identify {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      cursor: pointer;
+
+      img {
+        width: 30px;
+        height: 30px;
+        padding: 3px;
+        background: $main_color;
+        border-radius: 50%;
+        border: 2px solid $dark_color_07;
+        box-sizing: border-box;
+      }
+    }
+  }
+  .mypage_nick {
+    text-align: center;
+    font-size: $font_size_16;
+    font-weight: bold;
+  }
+
+  .mypage_link_list{
+    border-radius:8px;
+    overflow: hidden;
+    div{
+      background: $main_color;
+      height: 27px;
+      width: 100%;
+    }
+    a{
+      display:block;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-sizing: border-box;
+      padding: 40px 30px;
+      border-bottom:1px solid $dark_color_06;
+      color:$main_color;
+      background-color: $dark_color_07;
+      font-size: $font_size_16;
+      font-weight:600;
+
+      img{
+        filter: brightness(0);
+        transform: rotate(-90deg);
+        height: 24px;
+      }
+    }
+  }
+
+  .mypage_t_wrap{
+    margin-top: 60px;
+    margin-bottom: 80px;
+  }
+  .mypage_s_wrap{
+    margin-top:20px;
+    margin-bottom: 80px;
+    .mypage_point{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: $font_size_20;
+      font-weight: bold;
+      img{
+        width: 24px;
+        margin-right: 10px;
+      }
+    }
+    .mypage_s_link{
+      border-radius: 8px;
+      background: $main_color;
+      display:flex;
+      justify-content: space-evenly;
+      margin: 20px 0;
+      a{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 33%;
+        padding: 10px 0 20px;
+      }
+    }
+  }
+}
+

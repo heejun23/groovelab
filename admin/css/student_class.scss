@@ -1,0 +1,114 @@
+@import 'style.scss';
+@import 'branch.scss';
+
+body {
+	background: $dark_color_06;
+}
+
+.gnb .now_link {
+	color: $point_color;
+}
+
+main {
+	width: calc(100% - 300px);
+	margin: 70px 0 0 300px;
+	// background: #ff0;
+	// height: 1000px;
+
+	section {
+		width: 80%;
+		margin: 100px auto 30px;
+
+		h2 {
+			background: $dark_color_02;
+			color: $dark_color_07;
+			border-radius: 10px 10px 0 0;
+			height: 70px;
+			line-height: 70px;
+			font-size: $font_size_20;
+			text-indent: 50px;
+			font-weight: bold;
+		}
+
+		.class_list_wrap {
+			width: 100%;
+			box-sizing: border-box;
+			padding: 50px;
+			border-radius: 0px 0px 10px 10px;
+			background: $dark_color_07;
+
+			.class_list {
+				width: 880px;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: left;
+				margin: 0 auto;
+
+				> div {
+					width: 200px;
+					margin: 0px 10px 40px 10px;
+					text-align: center;
+
+					.thumb_wrap {
+						width: 200px;
+						height: 200px;
+
+						img {
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+						}
+					}
+
+					h3 {
+						font-size: $font_size_14;
+						font-weight: bold;
+						margin: 10px 0px 5px;
+						color: $dark_color_02;
+						width: 100%;
+						display: block;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+					}
+					p {
+						color: $dark_color_03;
+					}
+					div.class_ready {
+						@include btnSmall($dark_color_02, $dark_color_07);
+						line-height: 30px;
+						width: 100px;
+						margin: 10px auto;
+					}
+					div.class_ongoing {
+						@include btnSmall();
+						line-height: 30px;
+						width: 100px;
+						margin: 10px auto;
+					}
+					div.class_end {
+						@include btnSmall($danger_color, $dark_color_07);
+						line-height: 30px;
+						width: 100px;
+						margin: 10px auto;
+					}
+				}
+			}
+
+			.pagination {
+				text-align: center;
+				font-size: $font_size_18;
+
+				* {
+					margin: 0 18px;
+				}
+				.current_page {
+					text-decoration: underline;
+				}
+				a {
+					color: $dark_color_04;
+				}
+			}
+		}
+	}
+}

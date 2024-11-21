@@ -1,0 +1,119 @@
+@import 'style.scss';
+@import 'branch.scss';
+
+body {
+	background: $dark_color_06;
+}
+
+.gnb .now_link {
+	color: $point_color;
+}
+
+main {
+	width: calc(100% - 300px);
+	margin: 70px 0 0 300px;
+	// background: #ff0;
+	// height: 1000px;
+
+	section {
+		width: 90%;
+		margin: 100px auto 30px;
+
+		h2 {
+			background: $dark_color_02;
+			color: $dark_color_07;
+			border-radius: 10px 10px 0 0;
+			height: 70px;
+			line-height: 70px;
+			font-size: $font_size_20;
+			text-indent: 50px;
+			font-weight: bold;
+		}
+
+		.qna_wrap {
+			width: 100%;
+			box-sizing: border-box;
+			padding: 50px;
+			border-radius: 0px 0px 10px 10px;
+			background: $dark_color_07;
+			font-size: $font_size_16;
+
+			p {
+				display: flex;
+				width: 100%;
+				align-items: normal;
+				label {
+					width: 20%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					background: $dark_color_06;
+					border: 1px solid $dark_color_05;
+					border-right: none;
+					border-radius: 5px 0 0 5px;
+					margin-bottom: 10px;
+				}
+				input {
+					font-size: $font_size_16;
+				}
+				input[type='text'],
+				textarea {
+					width: 80%;
+					margin-bottom: 10px;
+					padding: 15px;
+					border: 1px solid $dark_color_05;
+					border-radius: 0 5px 5px 0;
+					outline: none;
+				}
+				input:focus,
+				textarea:focus {
+					box-shadow: 1px 1px 3px lightgray inset;
+				}
+				input[type='text'] {
+					box-sizing: border-box;
+					height: 44px;
+				}
+				textarea {
+					height: 330px;
+					resize: none;
+					box-sizing: border-box;
+					font-size: 16px;
+				}
+			}
+
+			.qna_content {
+				width: 100%;
+				padding: 20px;
+				border-radius: 5px;
+				border: 1px solid $dark_color_05;
+				text-align: center;
+				margin-bottom: 30px;
+				box-sizing: border-box;
+				img {
+					max-width: 100%;
+				}
+			}
+
+			.notice_buttons {
+				text-align: center;
+				justify-content: center;
+
+				input {
+					@include btn100($dark_color_02, $dark_color_07);
+					font-size: $font_size_20;
+				}
+				a {
+					@include btn100($danger_color, $dark_color_07);
+					line-height: 60px;
+					font-size: $font_size_20;
+				}
+				input,
+				a {
+					width: 200px;
+					height: 60px;
+					margin: 10px;
+				}
+			}
+		}
+	}
+}

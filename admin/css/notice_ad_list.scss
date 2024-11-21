@@ -1,0 +1,151 @@
+@import 'style.scss';
+@import 'branch.scss';
+
+body {
+	background: $dark_color_06;
+}
+
+.gnb .now_link {
+	color: $point_color;
+}
+
+main {
+	width: calc(100% - 300px);
+	margin: 70px 0 0 300px;
+	// background: #ff0;
+	// height: 1000px;
+
+	section {
+		width: 90%;
+		margin: 100px auto 30px;
+
+		h2 {
+			background: $dark_color_02;
+			color: $dark_color_07;
+			border-radius: 10px 10px 0 0;
+			height: 70px;
+			line-height: 70px;
+			font-size: $font_size_20;
+			text-indent: 50px;
+			font-weight: bold;
+		}
+
+		.notice_wrap {
+			width: 100%;
+			box-sizing: border-box;
+			padding: 50px;
+			border-radius: 0px 0px 10px 10px;
+			background: $dark_color_07;
+
+			.notice_select {
+				* {
+					vertical-align: middle;
+				}
+
+				label {
+					display: none;
+				}
+				select {
+					height: 36px;
+					box-sizing: border-box;
+					border-radius: 5px;
+					border: $border_ccc;
+					outline: none;
+					width: 50%;
+					min-width: 150px;
+					padding: 0px 16px;
+					margin-right: 10px;
+				}
+				.notice_search_btn {
+					@include btn100($dark_color_03, $dark_color_07);
+					margin-right: 10px;
+				}
+				.notice_update_btn {
+					@include btn100($danger_color, $dark_color_07);
+				}
+				input[type='submit'] {
+					height: 36px;
+					width: 100px;
+					// transform: translateY(2px);
+				}
+			}
+
+			.notice_list {
+				font-size: $font_size_14;
+				width: 100%;
+				margin: 35px 0;
+
+				caption {
+					display: none;
+				}
+
+				th {
+					color: $dark_color_04;
+					padding: 15px 0px;
+
+					&:nth-child(1) {
+						width: 5%;
+					}
+					&:nth-child(2) {
+						width: 60%;
+					}
+				}
+				tr {
+					border-bottom: 1px solid $dark_color_06;
+				}
+				td {
+					text-align: center;
+					padding: 8px 0px;
+					vertical-align: middle;
+
+					&:nth-child(2) {
+						text-align: left;
+					}
+
+					.member_profile_photo {
+						display: inline-block;
+						width: 30px;
+						height: 30px;
+						vertical-align: middle;
+						border-radius: 50%;
+						overflow: hidden;
+
+						img {
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+						}
+					}
+
+					a {
+						&.notice_modify_btn {
+							@include btn100($dark_color_03, $dark_color_07);
+						}
+						&.notice_delete_btn {
+							@include btn100($danger_color, $dark_color_07);
+						}
+						display: inline-block;
+						height: 36px !important;
+						line-height: 36px;
+						width: 100px !important;
+					}
+				}
+			}
+
+			.pagination {
+				text-align: center;
+				font-size: $font_size_18;
+
+				* {
+					margin: 0 18px;
+				}
+				.current_page {
+					text-decoration: underline;
+				}
+				a {
+					color: $dark_color_04;
+				}
+			}
+		}
+	}
+}

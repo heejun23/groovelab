@@ -1,0 +1,22 @@
+@import 'style';
+
+#head{
+  color: $dark_color_07;
+  position: relative;
+  box-shadow: 0 2px 3px rgba($dark_color_07, 0.3);
+  a{
+    position: absolute;
+    left:20px; top: 20%;
+    display: block;
+    width: 30px;
+    img{
+      width: 100%;
+    }
+  }
+  p{
+    text-align: center;
+    font-size: $font_size_16;
+    font-weight: 500;
+    line-height: 48px;
+  }
+}

@@ -1,0 +1,245 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+$main_color: #000000;
+$point_color: #adff00;
+$danger_color: #e5454c;
+$dark_color_01: #212121;
+$dark_color_02: #333333;
+$dark_color_03: #514d4d;
+$dark_color_04: #a2a2a2;
+$dark_color_05: #cccccc;
+$dark_color_06: #eeeeee;
+$dark_color_07: #ffffff;
+
+$border: 1px solid $dark_color_03;
+$header-shadow: 0px 1px 2px rgba(255, 255, 255, 0.1);
+
+$main_font: "Noto Sans KR", "맑은 고딕", Arial, sans-serif;
+
+$font_size_12: 12px;
+$font_size_14: 14px;
+$font_size_16: 16px;
+$font_size_18: 18px;
+$font_size_20: 20px;
+$font_size_22: 22px;
+
+$moblie_padding375: 0 1.5rem;
+$footer_shadow : 0px -2px 2px rgba(255, 255, 255, 0.1);
+
+// width: 100%. 필요시 width재설정
+@mixin btn100($bg:$point_color, $color:$main_color) {
+  border-radius: 5px;
+  width: 100%;
+  height: 50px;
+  font-weight: 600;
+  background:$bg;
+  color:$color;
+  font-size: $font_size_16;
+  border:none;
+}
+
+// width: 자동. 필요시 height, width재설정
+@mixin btnSmall($bg:$point_color, $color:$main_color){
+  font-weight: 600;
+  font-size: $font_size_12;
+  border-radius: 50px;
+  height: 30px;
+  line-height:30px;
+  background:$bg;
+  color:$color;
+  border:none;
+  padding: 0px 20px;
+}
+.blind{
+  display: none;
+}
+// body태그 속성
+body{
+  font-family:$main_font;
+  background:$main_color;
+  font-size: $font_size_14;
+}
+
+// 헤더서식
+header{
+  width: 100%;
+  height: 48px;
+  position: absolute; 
+  top: 0; left: 0;
+}
+
+.t_header {
+  background: $main_color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  width: 100%;
+  box-shadow: $header_shadow;
+  z-index:100;
+}
+//헤더 상단 로고
+.t_header h1{
+  width: 120px;
+  margin-left: 20px;
+}
+.t_header h1 img{
+  width: 100%;
+}
+
+// gnb 체크박스
+.t_header #gnb_btn{
+  display: none;
+}
+// gnb label
+.t_header .gnb_btn{
+  cursor: pointer;
+  margin: 6px 20px 0 0;;
+  width: 30px; height: 30px;
+}
+.t_header .gnb_btn img{
+  width: 26px; height: auto; 
+}
+
+// gnb ul메뉴
+header #gnb{
+  color: $dark_color_07;
+  background: $main_color;
+  font-size: $font_size_18;
+  position: fixed;
+  top: 0px; right: 0;
+  width: 100%; height: 100vh;
+  box-shadow: -1px 0 3px $dark_color_02;
+  transition: 0.3s;
+  z-index: 10000;
+  display: none;
+}
+
+header #gnb li a{
+  display: block;
+border-bottom: 1px solid $dark_color_02;
+clear: both;
+height: 45px;
+line-height: 45px;
+padding: 0 20px;
+box-sizing: content-box;
+}
+header #gnb li a img{
+  display: block;
+  width: 30px; height: 30px;
+  float: right;
+  margin-top: 8px;
+}
+header #gnb .sub_mnu{
+  background: $dark_color_01;
+}
+header #gnb .sub_mnu a{
+  border-bottom: 1px solid $dark_color_03;
+}
+
+//gnb 상단로고
+header #gnb >li:first-child{
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 15px;
+height: 48px;
+}
+
+header #gnb h1 a{
+  border: none;
+  width: 120px;
+  padding-top: 4px;
+}
+header #gnb h1 img{
+  all: unset !important;
+  width: 100% !important;
+  height: auto !important;
+}
+//닫기버튼
+header #gnb .close_btn{
+  width: 30px; height: 30px;
+  cursor: pointer;
+  margin-right: 20px;
+  margin-top: 3px;
+}
+
+//꺽쇠회전
+header #gnb li a img{
+  transition: 0.3s;
+}
+.reverse{
+  transform: rotate(180deg);
+}
+
+//상단 헤드
+#head{
+  color: $dark_color_07;
+  background: $main_color;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  box-shadow: 0 2px 3px rgba($dark_color_07, 0.1); 
+  z-index: 10;
+  a{
+    position: absolute;
+    left:20px; top: 20%;
+    display: block;
+    width: 30px;
+    z-index: 100;
+    img{
+      width: 100%; 
+    }
+  }
+  p{
+    text-align: center;
+    font-size: $font_size_16;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0;
+  }
+}
+
+//하단 gnb
+.f_gnb {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  box-shadow: 0px -1px 2px rgba(255, 255, 255, 0.1);
+  background-color: $main_color;
+  z-index: 9999;
+}
+.f_gnb ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+.f_gnb ul li {
+  width: 20%;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+.f_gnb ul li a {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.f_gnb ul li img {
+  width: 30px;
+}
+
+// a태그
+a{
+  text-decoration: none;
+  color: $dark_color_07;
+}
+/*# sourceMappingURL=login_start.css.map */

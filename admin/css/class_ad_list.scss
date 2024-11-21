@@ -1,0 +1,193 @@
+@import 'style.scss';
+@import 'branch.scss';
+
+body {
+	background: $dark_color_06;
+}
+
+.gnb .now_link {
+	color: $point_color;
+}
+
+main {
+	width: calc(100% - 300px);
+	margin: 70px 0 0 300px;
+	// background: #ff0;
+	// height: 1000px;
+
+	section {
+		width: 90%;
+		margin: 100px auto 30px;
+
+		h2 {
+			background: $dark_color_02;
+			color: $dark_color_07;
+			border-radius: 10px 10px 0 0;
+			height: 70px;
+			line-height: 70px;
+			font-size: $font_size_20;
+			text-indent: 50px;
+			font-weight: bold;
+		}
+
+		.class_list_wrap {
+			width: 100%;
+			box-sizing: border-box;
+			padding: 50px;
+			border-radius: 0px 0px 10px 10px;
+			background: $dark_color_07;
+
+			.class_search {
+				* {
+					vertical-align: middle;
+				}
+
+				label {
+					display: none;
+				}
+				select,
+				input {
+					height: 36px;
+					box-sizing: border-box;
+					border-radius: 5px;
+					border: 1px solid $dark_color_05;
+					outline: none;
+				}
+				select {
+					width: 15%;
+					min-width: 150px;
+					padding: 0px 16px;
+					margin-right: 10px;
+				}
+				input[type='text'] {
+					width: 40%;
+					min-width: 300px;
+					text-indent: 18px;
+					margin-right: 10px;
+				}
+				.submit_btn {
+					width: 10%;
+					display: inline-block;
+				}
+				input[type='submit'] {
+					@include btn100($danger_color, $dark_color_07);
+					height: 36px;
+					// transform: translateY(2px);
+				}
+			}
+
+			.class_list {
+				font-size: $font_size_14;
+				width: 100%;
+				margin: 35px 0;
+
+				caption {
+					display: none;
+				}
+
+				th {
+					width: 280px;
+					color: $dark_color_04;
+					padding: 15px 0px;
+				}
+				tr {
+					border-bottom: 1px solid $dark_color_06;
+				}
+				.class_tr_link {
+					cursor: pointer;
+				}
+				td {
+					text-align: center;
+					padding: 8px 0px;
+					vertical-align: middle;
+
+					.class_profile_photo {
+						display: inline-block;
+						width: 120px;
+						height: 120px;
+						vertical-align: middle;
+						border-radius: 5px;
+						overflow: hidden;
+						img {
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+						}
+					}
+				}
+			}
+			.class_ad_title {
+				width: 60%;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				text-align: left;
+				line-height: 140%;
+				font-size: $font_size_14;
+				span {
+					font-size: $font_size_16;
+					font-weight: 600;
+				}
+			}
+			.class_profile_Box {
+				display: flex;
+				gap: 0 20px;
+				align-items: center;
+				width: 100%;
+			}
+			.pagination {
+				text-align: center;
+				font-size: $font_size_18;
+
+				* {
+					margin: 0 18px;
+				}
+				.current_page {
+					text-decoration: underline;
+				}
+				a {
+					color: $dark_color_04;
+				}
+			}
+		}
+	}
+}
+a {
+	color: $main_color;
+	text-decoration: none;
+}
+.class_ad_btn {
+	#class_ad_modi {
+		display: inline-block;
+		width: 48%;
+		border-radius: 5px;
+		height: 35px;
+		background-color: $dark_color_01;
+		color: $dark_color_07;
+		text-align: center;
+		line-height: 35px;
+		font-size: $font_size_12;
+	}
+	#class_ad_del {
+		display: inline-block;
+		width: 48%;
+		border-radius: 5px;
+		height: 35px;
+		background-color: $danger_color;
+		color: $dark_color_07;
+		text-align: center;
+		line-height: 35px;
+		font-size: $font_size_12;
+	}
+}
+.class_ad_date {
+	font-size: $font_size_12;
+}
+.class_ad_status {
+	font-size: $font_size_16 !important;
+	color: $danger_color;
+	font-weight: bold;
+}
+.class_ad_student {
+	font-weight: bold;
+}

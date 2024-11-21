@@ -1,0 +1,164 @@
+@import 'style.scss';
+
+#gnb,
+.sub_mnu {
+	padding-left: 0;
+}
+#head p {
+	margin: 0;
+}
+// 메인서식
+main {
+	padding-top: 48px;
+	.review_upload {
+		padding-top: 30px;
+		.review_class_box {
+			width: 100%;
+			display: flex;
+			border-bottom: 1px solid $dark_color_02;
+			padding: 0 1.5rem 30px;
+			align-items: center;
+			.review_class_img {
+				width: 80px;
+				height: 80px;
+				overflow: hidden;
+				border-radius: 5px;
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+			.review_class_txt {
+				width: calc(100% - 80px);
+				color: $dark_color_07;
+				padding-left: 12px;
+				box-sizing: border-box;
+				font-size: $font_size_18;
+				p {
+					margin-bottom: 0;
+				}
+				.cate {
+					color: $dark_color_04;
+					font-size: $font-size_14;
+				}
+				.star {
+					padding: 12px 0;
+					width: 100%;
+					position: relative;
+					.review_star {
+						height: 25px;
+						overflow: hidden;
+						position: absolute;
+						left: 0;
+						top: -5px;
+						img {
+							width: 18px;
+						}
+					}
+				}
+				.review_view_nick_date {
+					display: flex;
+					width: 100%;
+					align-items: center;
+					font-size: $font_size_12;
+					color: $dark_color_04;
+					.review_title {
+						height: 13px;
+						border-right: 1px solid $dark_color_04;
+						padding-right: 8px;
+						line-height: 12px;
+						text-align: center;
+					}
+					.review_date {
+						height: 13px;
+						padding-left: 8px;
+						line-height: 12px;
+						text-align: center;
+					}
+				}
+			}
+		}
+		// 폼위치
+		form {
+			transform: translateY(5%);
+			padding-bottom: 87px;
+		}
+	}
+}
+// 리뷰별점
+.sreview_upload_star {
+	width: 100%;
+	height: auto;
+	h3 {
+		font-size: $font_size_18;
+		color: $dark_color_07;
+		text-align: center;
+	}
+}
+
+.rv_star {
+	display: flex;
+	justify-content: center;
+}
+.star2 {
+	appearance: none;
+	padding: 1px;
+	overflow: hidden;
+	width: 44px;
+	height: 44px;
+	margin-right: 8px;
+}
+.start2:last-child {
+	margin-right: 0;
+}
+.star2::after {
+	content: '';
+	display: block;
+	background-image: url('../images/review_star_noneColor.svg');
+	width: 44px;
+	height: 42px;
+}
+.star2:hover::after,
+.star2:has(~ .star2:hover)::after,
+.star2:checked::after,
+.star2:has(~ .star2:checked)::after {
+	background-image: url('../images/review_star_mainColor.svg');
+}
+.star2:hover ~ .star2::after {
+	background-image: url('../images/review_star_noneColor.svg');
+}
+
+.qna_upload_txt_box {
+	padding: $moblie_padding375;
+}
+
+#rv_content {
+	border: $border;
+	color: $dark_color_07;
+	background-color: $dark_color_01;
+	border-radius: 5px;
+	font-weight: 400;
+	width: 100%;
+	margin-top: 24px;
+	padding: 10px;
+	box-sizing: border-box;
+}
+.qna_upload_btn_box {
+	display: flex;
+	margin: 20px 1.5rem 0;
+	justify-content: space-between;
+	.qna_upload_cbtn {
+		width: 48%;
+		border-radius: 5px;
+		background-color: $danger_color;
+		height: 50px;
+		text-align: center;
+		line-height: 50px;
+		font-size: $font_size_16;
+	}
+	#qna_upload_btn {
+		width: 48% !important;
+		@include btn100;
+	}
+}

@@ -1,0 +1,108 @@
+@import 'style';
+@import 'branch.scss';
+
+#profile {
+	padding-bottom: 20px;
+}
+.sign_profile {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	margin: 20px auto;
+
+	.sign_profile_photo {
+		border-radius: 50%;
+		width: 150px;
+		height: 150px;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	.sign_image_upload {
+		position: absolute;
+		right: 10px;
+		bottom: 0;
+		cursor: pointer;
+
+		img {
+			width: 35px;
+			height: 35px;
+			padding: 3px;
+			background: $main_color;
+			border-radius: 50%;
+			border: 2px solid $dark_color_07;
+			box-sizing: border-box;
+		}
+	}
+
+	#sign_profile_photo {
+		display: none;
+	}
+}
+
+#profile .p_con {
+	width: 80% !important;
+	margin: auto;
+}
+#profile .p_con td:nth-of-type(1) {
+	width: 10%;
+}
+#profile input {
+	width: 100%;
+	height: 30px;
+	border: none;
+	border-radius: 8px;
+	padding: 8px;
+	background: $dark_color_06;
+	font-size: $font_size_16;
+	font-family: 'noto sans kr', '맑은고딕', arial;
+}
+#profile td {
+	height: 60px;
+	box-sizing: border-box;
+	vertical-align: middle;
+}
+
+#profile .interest {
+	padding: 0 !important;
+}
+#profile .interest input {
+	display: none;
+}
+#profile .interest label {
+	display: inline-block;
+	font-weight: bold;
+	border-radius: 30px;
+	height: 36px;
+	padding: 0px 20px;
+	line-height: 36px;
+	border: 1px solid $dark_color_03;
+	margin: 6px;
+	cursor: pointer;
+}
+#profile .interest input:checked + label {
+	background: $dark_color_02;
+	color: $dark_color_07;
+}
+#profile tr:nth-of-type(6) td:nth-of-type(2),
+#profile tr:nth-of-type(7) td:nth-of-type(2) {
+	font-size: $font_size_16;
+}
+#profile tr:last-of-type select {
+	border: 1px solid $dark_color_05;
+	width: 50%;
+	height: 46px;
+	border-radius: 8px;
+	font-size: $font_size_16;
+	font-family: 'noto sans kr', '맑은고딕', arial;
+}
+
+.nick_result,
+.email_result {
+	margin-bottom: 5px;
+}

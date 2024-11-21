@@ -1,0 +1,128 @@
+@import "style.scss";
+
+// 메인서식 
+.review_mypage {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 100px;
+  padding-top: 48px;
+  .review_mypage_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 96%; height: auto; 
+    margin: auto;
+    .review_mypage_box {
+      display: block;
+      position: relative;
+      width: 48.5%;
+      height: auto;
+      background-color: $dark_color_01;
+      border: 1px solid $dark_color_03;
+      border-radius: 5px;
+      margin-top: 0.5rem;
+      .review_mypage_img {
+        width: 100%;
+        height: 150px;
+        overflow: hidden;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        img {
+          width: 100%;
+          object-fit: cover;
+          height: 100%;
+        }
+      }
+      .review_mypage_title {
+        padding: 8px;
+        color: $dark_color_07;
+        h3 {
+          font-size: $font_size_16;
+          font-weight: 500;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          width: 90%;
+        }
+        .cate {
+          color: $dark_color_04;
+          padding-top: 8px;
+          font-size: $font-size_14;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+        .not_review {
+          padding: 6px 0 16px;
+          line-height: 1.3;
+          color: $dark_color_04;
+        }
+        .star {
+          padding: 30px 0;
+          width: 100%;
+          position: relative;
+          .review_star {
+            height: 18px;
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            top: 10px;
+            img {
+              width: 18px;
+            }
+          }
+        }
+        .review_date_nick {
+          display: flex;
+          position: absolute;
+          bottom: 8px; left: 0;
+          padding: 0 8px;
+          box-sizing: border-box;
+          width: 100%;
+          justify-content: space-between;
+          font-size: $font_size_12;
+          color: $dark_color_04;
+        }
+      }
+    }
+  }
+}
+
+// 페이지네이션
+.pagination {
+  text-align: center;
+  color:$dark_color_07;
+  margin:30px 0;
+  img{filter: brightness(3);transform: translateY(2px);}
+  .current_page{border-bottom: 1px solid $dark_color_07; cursor: pointer;}
+  a, span{color:$dark_color_07;
+  text-decoration:none;
+  display: inline-block;
+  padding: 5px;
+  margin: 0 4px;
+}
+}
+
+
+// 클래스 없을때
+.no_info{
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  img{
+    width: 120px;
+  }
+  p{
+    color: $dark_color_07;
+    margin: 20px 0;
+  }
+  a{
+    @include btnSmall;
+    display: block;
+    font-size: $font_size_14;
+    width: fit-content;
+    margin: auto;
+    line-height: 28px;
+  }
+}

@@ -1,0 +1,110 @@
+@import 'style.scss';
+
+body {
+	width: 100vw;
+	font-family: $main_font;
+	overflow-x: hidden;
+	background-color: #333;
+	font-size: $font_size_14;
+	font-weight: 400;
+}
+a {
+	color: $dark_color_01;
+	text-decoration: none;
+}
+* {
+	box-sizing: border-box;
+}
+
+main {
+	width: 100%;
+}
+.login_ad {
+	width: 800px;
+	height: 500px;
+	margin: 200px auto;
+	background-color: $dark_color_07;
+	border-radius: 15px;
+	h2 {
+		text-align: center;
+		padding-top: 50px;
+		img {
+			width: 250px;
+		}
+	}
+	p {
+		text-align: center;
+		padding-top: 12px;
+		font-size: $font_size_16;
+		span {
+			font-weight: bold;
+		}
+	}
+}
+#login_ad_form {
+	width: 400px;
+	margin: 0 auto;
+	padding-top: 60px;
+}
+
+.login_ad_id_box {
+	position: relative;
+	#mb_id {
+		width: 400px;
+		height: 60px;
+		border-radius: 5px;
+		text-indent: 50px;
+		font-size: $font_size_14;
+		border: 1px solid $dark_color_04;
+	}
+	img {
+		width: 30px;
+		position: absolute;
+		left: 12px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+.login_ad_pw_box {
+	margin-top: 10px;
+	position: relative;
+	#mb_password {
+		width: 400px;
+		height: 60px;
+		border-radius: 5px;
+		text-indent: 50px;
+		border: 1px solid $dark_color_04;
+	}
+	img {
+		width: 30px;
+		position: absolute;
+		left: 12px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+.login_ad_checkbox {
+	margin-top: 10px;
+	#id_check {
+		width: 20px;
+		height: 20px;
+	}
+	label {
+		display: inline-block;
+		font-size: $font_size_16;
+		transform: translateY(-4px);
+		color: $dark_color_03;
+	}
+}
+#login_ad_btn {
+	width: 400px;
+	height: 60px;
+	border-radius: 5px;
+	background-color: $main_color;
+	color: $dark_color_07;
+	font-size: $font_size_18;
+	font-weight: bold;
+	margin-top: 30px;
+	border: none;
+}

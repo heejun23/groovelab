@@ -1,0 +1,200 @@
+@import 'style';
+
+// 메인서식
+.qna_view {
+	padding-bottom: 70px;
+	padding-top: 60px;
+	.qna_view_head {
+		padding: $moblie_padding375;
+		width: 100%;
+		border-bottom: 1px solid $dark_color_02;
+		position: relative;
+		padding-bottom: 45px;
+		line-height: 30px;
+		box-sizing: border-box;
+		.qna_view_title {
+			color: $dark_color_07;
+			font-size: $font_size_20;
+			font-weight: 600;
+		}
+		.qna_view_date {
+			color: $dark_color_05;
+		}
+		.qna_view_profile_box {
+			display: flex;
+			align-items: center;
+			position: absolute;
+			right: 1.5rem;
+			bottom: 10px;
+			color: $dark_color_06;
+			font-size: $font_size_16;
+			.qna_view_profile {
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+				overflow: hidden;
+				margin-right: 10px;
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+			.qna_view_usernick {
+				font-size: $font_size_14;
+				color: $dark_color_05;
+			}
+		}
+	}
+	.qna_view_img_txt {
+		.qna_view_body_img {
+			width: 100%;
+		}
+		img {
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+	.qna_view_body_txt {
+		padding: 1.5rem 1.5rem 3rem;
+		width: 100%;
+		margin-top: 20px;
+		color: $dark_color_07;
+		border-bottom: 1px solid $dark_color_02;
+		box-sizing: border-box;
+		line-height: 1.3;
+		min-height: 300px;
+	}
+	.qna_view_btn {
+		padding-bottom: 100px;
+		width: 100%;
+		height: auto;
+		display: flex;
+		justify-content: right;
+		align-items: center;
+		padding: 1.5rem 1.5rem;
+		box-sizing: border-box;
+		#qna_view_del {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-weight: 600;
+			font-size: $font_size_14;
+			border-radius: 50px;
+			margin-right: 12px;
+			width: 80px;
+			height: 36px;
+			background: $danger_color;
+			border: none;
+			color: $dark_color_07;
+			img {
+				width: 24px;
+			}
+		}
+		#qna_view_edit {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-weight: 600;
+			font-size: $font_size_14;
+			border-radius: 50px;
+			width: 80px;
+			height: 36px;
+			background: $point_color;
+			border: none;
+			color: $main_color;
+			img {
+				width: 24px;
+			}
+		}
+	}
+}
+
+// 답변
+.qna_view_reply_wrap {
+	width: 100%;
+	padding: 1rem 1.5rem 50px;
+	box-sizing: border-box;
+	line-height: 1.3;
+	h3 {
+		color: $dark_color_07;
+		font-weight: bold;
+		font-size: $font_size_16;
+		text-align: center;
+	}
+	.qna_view_reply {
+		margin-top: 20px;
+		height: auto;
+		#qna_reply {
+			border: $border;
+			color: $dark_color_07;
+			background-color: $dark_color_01;
+			border-radius: 5px;
+			font-family: $main_font;
+			font-weight: 300;
+			width: 100%;
+			padding: 12px;
+			box-sizing: border-box;
+		}
+	}
+	.qna_view_reply_btn {
+		display: flex;
+		margin-top: 20px;
+		justify-content: space-between;
+		#qna_reply_del {
+			font-family: $main_font;
+			width: 48%;
+			border-radius: 5px;
+			background-color: $danger_color;
+			height: 50px;
+			text-align: center;
+			line-height: 46px;
+			font-size: $font_size_16;
+			border: none;
+			color: $dark_color_07;
+			font-weight: 500;
+			cursor: pointer;
+		}
+		#qna_reply_edit {
+			font-family: $main_font;
+			width: 48% !important;
+			@include btn100;
+			line-height: 46px;
+			text-align: center;
+			cursor: pointer;
+		}
+	}
+}
+.qna_view_reply_pf {
+	position: relative;
+	width: 80%;
+	margin-top: 14px;
+	align-self: center;
+	// justify-content: space-between;
+	.reply_nick {
+		color: $dark_color_05;
+	}
+	.reply_date {
+		color: $dark_color_04;
+	}
+}
+.reply_done {
+	color: $dark_color_07;
+	width: 100%;
+	position: absolute;
+	top: 44px;
+	left: 45px;
+}
+.reply_img {
+	img {
+		position: absolute;
+		width: 35px;
+		height: 35px;
+		overflow: hidden;
+		border-radius: 50%;
+		object-fit: cover;
+	}
+	p{
+		margin-left: 44px;
+	}
+}

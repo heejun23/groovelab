@@ -1,0 +1,95 @@
+@import "style";
+
+#head p{
+  margin-bottom: 0;
+}
+
+#gnb,
+.sub_mnu {
+  padding-left: 0;
+}
+
+// 메인서식
+main {
+  .sign_pass_upload {
+    padding: $moblie_padding375;
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-bottom: 60px;
+    .sign_pass_upload_password_box {
+      margin-top: 20px;
+    }
+    .sign_pass_upload_top_box {
+      text-align: center;
+      img {
+        width: 94px;
+        height: 94px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 10px;
+      }
+    }
+    #mb_password,
+    #mb_password_re {
+      @include btn100;
+      background-color: $dark_color_02;
+      border: $border;
+      color: $dark_color_07;
+      font-size: $font-size_14;
+      font-weight: 400;
+      text-indent: 30px;
+      margin-top: 5px;
+    }
+    .sign_pass_upload_pw_box {
+      margin-top: 13px;
+      span {
+        color: $point_color;
+        font-size: $font-size_12;
+      }
+    }
+  }
+}
+
+.sign_pass_upload_pw_box {
+  position: relative;
+  .sign_pass_upload_pwd,
+  .sign_pass_upload_pwd2 {
+    width: 22px;
+    position: absolute;
+    top: 40px;
+    left: 8px;
+  }
+  // .sign_pass_upload_pwd2{
+  //   top:38px;
+  // }
+  label {
+    color: $dark_color_07;
+  }
+}
+
+// 버튼서식 (돌아가기, 비밀번호 확인)
+.sign_pass_upload_btn {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  .sign_pass_upload_back_btn {
+    display: block;
+    width: 48%;
+    text-align: center;
+    height: 50px;
+    line-height: 46px;
+    border-radius: 5px;
+    border: 1px solid $dark_color_07;
+    font-size: $font_size_16;
+  }
+  #sign_pass_upload_pw_check_btn {
+    @include btn100;
+    width: 48%;
+    font-weight: bold;
+  }
+}

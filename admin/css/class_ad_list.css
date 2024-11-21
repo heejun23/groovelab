@@ -1,0 +1,209 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+body {
+  font-family: "Noto Sans KR", "맑은 고딕", Arial, sans-serif;
+  font-size: 12px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.blind {
+  display: none;
+}
+
+.branch {
+  position: absolute;
+  left: 320px;
+  top: 26px;
+  left: 341px;
+  top: 28px;
+}
+
+body {
+  background: #eeeeee;
+}
+
+.gnb .now_link {
+  color: #adff00;
+}
+
+main {
+  width: calc(100% - 300px);
+  margin: 70px 0 0 300px;
+}
+main section {
+  width: 90%;
+  margin: 100px auto 30px;
+}
+main section h2 {
+  background: #333333;
+  color: #ffffff;
+  border-radius: 10px 10px 0 0;
+  height: 70px;
+  line-height: 70px;
+  font-size: 20px;
+  text-indent: 50px;
+  font-weight: bold;
+}
+main section .class_list_wrap {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 50px;
+  border-radius: 0px 0px 10px 10px;
+  background: #ffffff;
+}
+main section .class_list_wrap .class_search * {
+  vertical-align: middle;
+}
+main section .class_list_wrap .class_search label {
+  display: none;
+}
+main section .class_list_wrap .class_search select,
+main section .class_list_wrap .class_search input {
+  height: 36px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  outline: none;
+}
+main section .class_list_wrap .class_search select {
+  width: 15%;
+  min-width: 150px;
+  padding: 0px 16px;
+  margin-right: 10px;
+}
+main section .class_list_wrap .class_search input[type=text] {
+  width: 40%;
+  min-width: 300px;
+  text-indent: 18px;
+  margin-right: 10px;
+}
+main section .class_list_wrap .class_search .submit_btn {
+  width: 10%;
+  display: inline-block;
+}
+main section .class_list_wrap .class_search input[type=submit] {
+  border-radius: 5px;
+  width: 100%;
+  height: 50px;
+  font-weight: 600;
+  background: #e5454c;
+  color: #ffffff;
+  font-size: 16px;
+  border: none;
+  height: 36px;
+}
+main section .class_list_wrap .class_list {
+  font-size: 14px;
+  width: 100%;
+  margin: 35px 0;
+}
+main section .class_list_wrap .class_list caption {
+  display: none;
+}
+main section .class_list_wrap .class_list th {
+  width: 280px;
+  color: #a2a2a2;
+  padding: 15px 0px;
+}
+main section .class_list_wrap .class_list tr {
+  border-bottom: 1px solid #eeeeee;
+}
+main section .class_list_wrap .class_list .class_tr_link {
+  cursor: pointer;
+}
+main section .class_list_wrap .class_list td {
+  text-align: center;
+  padding: 8px 0px;
+  vertical-align: middle;
+}
+main section .class_list_wrap .class_list td .class_profile_photo {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  vertical-align: middle;
+  border-radius: 5px;
+  overflow: hidden;
+}
+main section .class_list_wrap .class_list td .class_profile_photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main section .class_list_wrap .class_ad_title {
+  width: 60%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: left;
+  line-height: 140%;
+  font-size: 14px;
+}
+main section .class_list_wrap .class_ad_title span {
+  font-size: 16px;
+  font-weight: 600;
+}
+main section .class_list_wrap .class_profile_Box {
+  display: flex;
+  gap: 0 20px;
+  align-items: center;
+  width: 100%;
+}
+main section .class_list_wrap .pagination {
+  text-align: center;
+  font-size: 18px;
+}
+main section .class_list_wrap .pagination * {
+  margin: 0 18px;
+}
+main section .class_list_wrap .pagination .current_page {
+  text-decoration: underline;
+}
+main section .class_list_wrap .pagination a {
+  color: #a2a2a2;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.class_ad_btn #class_ad_modi {
+  display: inline-block;
+  width: 48%;
+  border-radius: 5px;
+  height: 35px;
+  background-color: #212121;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  font-size: 12px;
+}
+.class_ad_btn #class_ad_del {
+  display: inline-block;
+  width: 48%;
+  border-radius: 5px;
+  height: 35px;
+  background-color: #e5454c;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  font-size: 12px;
+}
+
+.class_ad_date {
+  font-size: 12px;
+}
+
+.class_ad_status {
+  font-size: 16px !important;
+  color: #e5454c;
+  font-weight: bold;
+}
+
+.class_ad_student {
+  font-weight: bold;
+}/*# sourceMappingURL=class_ad_list.css.map */

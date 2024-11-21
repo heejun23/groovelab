@@ -1,0 +1,147 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+body {
+  font-family: "Noto Sans KR", "맑은 고딕", Arial, sans-serif;
+  font-size: 12px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.blind {
+  display: none;
+}
+
+.branch {
+  position: absolute;
+  left: 320px;
+  top: 26px;
+  left: 341px;
+  top: 28px;
+}
+
+body {
+  background: #eeeeee;
+}
+
+.gnb .now_link {
+  color: #adff00;
+}
+
+main {
+  width: calc(100% - 300px);
+  margin: 70px 0 0 300px;
+}
+main section {
+  width: 90%;
+  margin: 100px auto 30px;
+}
+main section h2 {
+  background: #333333;
+  color: #ffffff;
+  border-radius: 10px 10px 0 0;
+  height: 70px;
+  line-height: 70px;
+  font-size: 20px;
+  text-indent: 50px;
+  font-weight: bold;
+}
+main section .member_list_wrap {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 50px;
+  border-radius: 0px 0px 10px 10px;
+  background: #ffffff;
+}
+main section .member_list_wrap .member_search * {
+  vertical-align: middle;
+}
+main section .member_list_wrap .member_search label {
+  display: none;
+}
+main section .member_list_wrap .member_search select,
+main section .member_list_wrap .member_search input {
+  height: 36px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  outline: none;
+}
+main section .member_list_wrap .member_search select {
+  width: 15%;
+  min-width: 150px;
+  padding: 0px 16px;
+  margin-right: 10px;
+}
+main section .member_list_wrap .member_search input[type=text] {
+  width: 40%;
+  min-width: 300px;
+  text-indent: 18px;
+  margin-right: 10px;
+}
+main section .member_list_wrap .member_search .submit_btn {
+  width: 10%;
+  display: inline-block;
+}
+main section .member_list_wrap .member_search input[type=submit] {
+  border-radius: 5px;
+  width: 100%;
+  height: 50px;
+  font-weight: 600;
+  background: #e5454c;
+  color: #ffffff;
+  font-size: 16px;
+  border: none;
+  height: 36px;
+}
+main section .member_list_wrap .member_list {
+  font-size: 14px;
+  width: 100%;
+  margin: 35px 0;
+}
+main section .member_list_wrap .member_list caption {
+  display: none;
+}
+main section .member_list_wrap .member_list th {
+  color: #a2a2a2;
+  padding: 15px 0px;
+}
+main section .member_list_wrap .member_list tr {
+  border-bottom: 1px solid #eeeeee;
+}
+main section .member_list_wrap .member_list .member_tr_link {
+  cursor: pointer;
+}
+main section .member_list_wrap .member_list td {
+  text-align: center;
+  padding: 8px 0px;
+  vertical-align: middle;
+}
+main section .member_list_wrap .member_list td .member_profile_photo {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  border-radius: 50%;
+  overflow: hidden;
+}
+main section .member_list_wrap .member_list td .member_profile_photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main section .member_list_wrap .pagination {
+  text-align: center;
+  font-size: 18px;
+}
+main section .member_list_wrap .pagination * {
+  margin: 0 18px;
+}
+main section .member_list_wrap .pagination .current_page {
+  text-decoration: underline;
+}
+main section .member_list_wrap .pagination a {
+  color: #a2a2a2;
+}/*# sourceMappingURL=member_list.css.map */

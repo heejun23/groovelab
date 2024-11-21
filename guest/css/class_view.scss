@@ -1,0 +1,215 @@
+@import "style";
+
+.t_header{
+display: none;
+}
+// 클래스 이미지랑 설명
+.info_top {
+  color: $dark_color_07;
+  position: relative;
+  width: 100%;
+  height: 350px;
+  margin-top: 48px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .gradation {
+    background: linear-gradient(
+      0deg,
+      $main_color,
+      rgba(0, 0, 0, 0.7) 50%,
+      rgba(0, 0, 0, 0)
+    );
+    height: 120px;
+    width: 100%;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+  }
+  .t_box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+    line-height: 1.5;
+    h3 {
+      font-size: $font_size_20;
+      font-weight: bold;
+    }
+    p {
+      &:nth-of-type(2),
+      &:nth-of-type(3) {
+        color: $dark_color_05;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+// 클래스 구매하기 & 정보
+.info_middle {
+  color: $dark_color_07;
+  padding: 15px 15px 0;
+  .buy,
+  .info_card {
+    display: block;
+    background: $dark_color_01;
+    width: 100%;
+    height: 120px;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 8px;
+  }
+  .buy {
+    p {
+      &:nth-of-type(1) {
+        font-size: $font_size_16;
+      }
+      &:nth-of-type(2) {
+        color: $dark_color_05;
+        font-weight: 300;
+        line-height: 1.5;
+        height: 45px;
+        margin: 8px 0;
+      }
+      &:nth-of-type(3) {
+        text-align: right;
+        font-size: $font_size_16;
+      }
+    }
+  }
+  .info_card {
+    margin-top: 15px;
+    height: auto;
+    p {
+      font-size: $font_size_16;
+    }
+    ul {
+      color: $dark_color_05;
+      font-weight: 300;
+      line-height: 1.5;
+      margin: 8px 0 0;
+    }
+  }
+  .share {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    #zzim {
+      display: none;
+    }
+    label{
+      cursor: pointer;
+    }
+    .heart {
+      display: inline-block;
+      background: url("../images/heart_toggle.svg") no-repeat;
+      background-size: 66px;
+      background-position: -36px 0;
+      width: 30px;
+      height: 28px;
+      text-indent: -9999px;
+      margin-right: 6px;
+    }
+    #zzim:checked + label {
+      background-position: 0 0;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      margin-left: 15px;
+      img {
+        width: 30px;
+        margin-right: 6px;
+      }
+    }
+  }
+}
+.info_bottom {
+  width: 100%;
+  margin-bottom: 70px;
+  img{
+    width: 100%; height: 100%;
+    object-fit: cover;
+  }
+}
+
+
+h4{
+  font-size: $font_size_16;
+  font-weight: bold;
+  text-align: center;
+  color:#fff;
+  padding:20px 0px;
+  border-top:$border;
+  margin-top:10px;
+}
+.info_video{
+  width: 100%;
+  margin-bottom: 30px;
+  video{
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+
+// 하단고정 ui
+.b_nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0; left: 0;
+  width: 100%;
+  background: $main_color;
+  box-shadow: 0 -2px 2px rgba($dark_color_07, 0.1);
+
+  #zzim2 {
+    display: none;
+  }
+  label{
+    cursor: pointer;
+    display: inline-block;
+    background: url("../images/heart_toggle.svg") no-repeat;
+    background-size: 66px;
+    background-position: -36px 0;
+    width: 30px;
+    height: 28px;
+    text-indent: -9999px;
+  }
+  #zzim2:checked + label {
+    background-position: 0 0;
+  }
+  .share{
+    img{
+      width: 30px;
+      margin: 0 10px;
+    }
+  }
+  .cart_btn{
+    @include btn100;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    width: 70%;
+  }
+  .no_btn{
+    @include btn100($dark_color_02,$dark_color_07);
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    width: 70%;
+    pointer-events: none;
+    user-select: none;
+    cursor: not-allowed;
+  }
+}

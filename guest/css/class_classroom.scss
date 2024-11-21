@@ -1,0 +1,140 @@
+@import "style.scss";
+
+.t_header {
+  display: none !important;
+}
+
+main {
+  padding: 78px 1.5rem;
+  box-sizing: border-box;
+  position: relative;
+  height: 100%;
+
+  .class_classroom_cont {
+    video {
+      width: 100%;
+    }
+    .info {
+      color: $dark_color_07;
+      margin: 20px 0;
+      h3 {
+        font-size: $font_size_16;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      p {
+        line-height: 18px;
+        color: $dark_color_05;
+      }
+    }
+  }
+
+  // 강의 목록
+  input {
+    display: none;
+  }
+  input:checked + .class_mypage_list{
+    // top:calc(100% - 303px);   
+    bottom: calc(0% + 61px);
+    >label{
+      img{
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .class_mypage_list {
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    border: $border;
+    border-bottom: 0;
+    position: fixed;
+    width: calc(100% - 3rem);
+    // top: calc(100% - 1015px);    
+    bottom: calc(0% - 142px);
+    box-sizing: border-box;
+    transition:0.5s;
+    background: $main_color;
+    > label {
+      background: $point_color;
+      color: $main_color;
+      font-size: $font_size_14;
+      font-weight: bold;
+      padding: 10px 10px;
+      border-bottom: $border;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      img {
+        filter: brightness(0);
+        width: 20px;
+        transition: 0.5s;
+      }
+    }
+    ul {
+      height: 200px;
+      overflow-y: scroll;
+      li {
+        color: $dark_color_07;
+        background: $dark_color_01;
+        border-bottom: $border;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a{
+          display: flex;
+          width: 100%;
+          padding: 12px;
+        }
+        p {
+          line-height: normal;
+          &:first-child {
+            width: 10%;
+          }
+          &:nth-child(2) {
+            width: 100%;
+          }
+        }
+        img {
+          width: 20px;
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
+
+// f_gnb서식
+.f_gnb {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  box-shadow: $footer_shadow;
+  background-color: $main_color;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    li {
+      width: 20%;
+      color: $dark_color_07;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      a {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+      img {
+        width: 30px;
+      }
+    }
+  }
+}

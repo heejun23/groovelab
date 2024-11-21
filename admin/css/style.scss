@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+// 노토산스
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+$main_color: #000000;
+$point_color: #adff00;
+$danger_color: #e5454c;
+$dark_color_01: #212121;
+$dark_color_02: #333333;
+$dark_color_03: #514d4d;
+$dark_color_04: #a2a2a2;
+$dark_color_05: #cccccc;
+$dark_color_06: #eeeeee;
+$dark_color_07: #ffffff;
+
+$border: 1px solid $dark_color_03;
+$border_ccc: 1px solid $dark_color_05;
+
+$main_font: "Noto Sans KR", "맑은 고딕", Arial, sans-serif;
+
+$font_size_12: 12px;
+$font_size_14: 14px;
+$font_size_16: 16px;
+$font_size_18: 18px;
+$font_size_20: 20px;
+$font_size_22: 22px;
+
+// width: 100%. 필요시 width재설정
+@mixin btn100($bg:$point_color, $color:$main_color) {
+  border-radius: 5px;
+  width: 100%;
+  height: 50px;
+  font-weight: 600;
+  background:$bg;
+  color:$color;
+  font-size: $font_size_16;
+  border:none;
+}
+
+// width: 자동. 필요시 height, width재설정
+@mixin btnSmall($bg:$point_color, $color:$main_color){
+  font-weight: 600;
+  font-size: $font_size_12;
+  border-radius: 50px;
+  height: 30px;
+  background:$bg;
+  color:$color;
+  border:none;
+}
+
+body{
+  font-family: $main_font;
+  font-size: $font_size_12;
+}
+a{
+  text-decoration: none;
+}
+
+.blind{display:none;}

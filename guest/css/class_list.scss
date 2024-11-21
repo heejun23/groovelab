@@ -1,0 +1,144 @@
+@import 'style';
+
+.t_header{
+  display: none;
+}
+
+#h_box{
+  overflow: hidden;
+  position: fixed;
+  top: 47px; left: 0;
+  background: $main_color;
+  box-shadow: $header-shadow;
+  z-index: 200;
+  width: 100%;
+  #h_list{
+    display: flex;
+    justify-content: space-evenly;
+    overflow-x: auto;
+    padding: 0 6px;
+    box-sizing: border-box;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar{
+      display: none;
+    }
+
+    li{
+      a{
+        display: block;
+        padding: 15px 8px;
+        white-space: nowrap;
+        color: $dark_color_04;
+        font-weight: 300;
+        &:hover{
+          color: $dark_color_07;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+.h_on{
+color: $dark_color_07 !important;
+font-weight: 500 !important;
+}
+
+#class_info{
+  width: 96%;
+  margin: 96px auto 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  //클래스 정보없음
+  & .no_info{
+    text-align: center;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    img{
+      width: 150px;
+    }
+    p{
+      color: $dark_color_07;
+      line-height: 5;
+    }
+  }
+  & .info{
+      width: 49%; height: 250px;
+      box-sizing: border-box;
+      margin: 4px 0;
+      // 이미지 부분
+      .img_box{
+        width: 100%; height: 60%;
+        img{
+          width: 100%; height: 100%;
+          object-fit: cover;
+          border-radius: 8px 8px 0 0;
+        }
+      }
+      .t_box{
+        color: $dark_color_07;
+        background: $dark_color_01;
+        border-radius: 0 0 8px 8px;
+        padding: 8px;
+        height: 40%;
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+        h4{
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 2; /* 표시할 줄 수 설정 */
+          -webkit-box-orient: vertical;
+          line-height: 1.5;
+        }
+        p{
+          &:nth-of-type(1){
+            color: $dark_color_04;
+            font-size: $font_size_12;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            margin-bottom: 8px;
+          }
+          &:nth-of-type(2){
+            font-size: $font_size_18;
+            margin-top: 4px;
+            position: absolute;
+            bottom: 10px; right: 8px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+}
+
+.more_btn{
+  display: block;
+  width: fit-content;
+margin: auto;
+  img{
+    width: 30px; height: auto;
+
+  }
+}
+
+
+
+// 페이지네이션
+.pagination{
+  text-align: center;
+  color:$dark_color_07;
+  margin:30px 0 80px;
+  
+  img{filter: brightness(3);transform: translateY(2px);}
+  .current_page{border-bottom: 1px solid $dark_color_07; cursor: pointer;}
+  a, span{color:$dark_color_07;
+  text-decoration:none;
+  display: inline-block;
+  padding: 5px;
+  margin: 0 4px;
+}
+}

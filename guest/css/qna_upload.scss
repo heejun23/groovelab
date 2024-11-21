@@ -1,0 +1,125 @@
+@import 'style.scss';
+
+.t_header{
+  display: none;
+}
+#gnb, .sub_mnu{
+  padding-left: 0;
+}
+#head p{
+  margin-bottom: 0;
+}
+  .qna_upload{
+    padding: $moblie_padding375;
+    position: absolute;
+    width: 100%;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .qna_upload_title_box, .qna_upload_nickname_box
+    , .qna_upload_img_box{
+      display:flex;
+      flex-wrap:wrap;
+      padding-bottom:12px;
+      span{
+        display:flex;
+        align-items:center;
+        width:28%;
+        height:50px;
+        line-height:50px;
+        text-align:center;
+        border:$border;
+        color:$dark_color_07;
+        background-color: $dark_color_01;
+        border-top-left-radius:5px ;
+        border-bottom-left-radius:5px ;
+        padding:10px;
+        justify-content:center;
+        img{
+          width:26px;
+          padding-right:3px;
+        }
+      }
+      label{
+        width:20%;
+        height:50px;
+        line-height:50px;
+        text-align:center;
+        border:$border;
+        color:$dark_color_07;
+        background-color: $dark_color_01;
+        border-top-left-radius:5px ;
+        border-bottom-left-radius:5px ;
+
+      }
+      #qna_title, #mb_nick{
+        width:80%;
+        height:50px;
+        border:$border;
+        border-left:none;
+        color:$dark_color_07;
+        font-size:$font-size_14;
+        background-color: $main_color;
+        font-weight:400;
+        text-indent:12px;
+        border-top-right-radius:5px ;
+        border-bottom-right-radius:5px ;
+      }
+    }
+  }
+
+// 파일 서식
+input[type=file]{
+  display:none;
+}
+.qna_image_box{
+  width:52%;
+  height:50px;
+  border:$border;
+  border-left:none;
+  border-right:none;
+  color:$dark_color_07;
+  font-size:$font-size_14;
+  background-color: $main_color;
+  font-weight:400;
+  text-indent:12px;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  white-space:nowrap;
+  line-height:50px;
+  text-align:center;
+}
+.qna_img_label{
+  border-top-left-radius:0px !important;
+  border-bottom-left-radius:0px !important;
+  border-top-right-radius:5px ;
+  border-bottom-right-radius:5px ;
+}
+#qna_content{
+  border:$border;
+  color:$dark_color_07;
+  background-color: $dark_color_01;
+  border-radius:5px;
+  font-weight:400;
+  padding:12px;
+  box-sizing: border-box;
+  width:100%;
+}
+.qna_upload_btn_box{
+  display:flex;
+  margin-top:20px;
+  justify-content:space-between;
+  .qna_upload_cbtn{
+    width:48%;
+    border-radius:5px;
+    background-color: $danger_color;
+    height:50px;
+    text-align:center;
+    line-height:50px;
+    font-size:$font_size_16;
+  }
+  #qna_upload_btn{
+    width:48% !important;
+    @include btn100;
+  }
+}

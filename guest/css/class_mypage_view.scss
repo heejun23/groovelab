@@ -1,0 +1,126 @@
+@import "style.scss";
+
+#gnb, .sub_mnu{
+  padding-left: 0;
+}
+#head p{
+  margin: 0;
+}
+
+.t_header{
+  display: none;
+}
+main {
+  padding: 78px 1.5rem;
+  //상단 정보
+  .class_mypage_info {
+    display: flex;
+    justify-content: space-between;
+    .class_mypage_info_thumb {
+      height: 160px;
+      width: 50%;
+      margin-right: 10px;
+      border-radius: 5px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .class_mypage_info_text {
+      width: 50%;
+      line-height: 20px;
+      h2 {
+        font-size: $font_size_14;
+        color: $dark_color_07;
+        font-weight: bold;
+        // 2줄 말줄임
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+      p {
+        font-size: $font-size_12;
+        color: $dark_color_05;
+      }
+      .class_desc {
+        line-height: 18px;
+        // 3줄 말줄임
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
+    }
+  }
+
+  //게시판 버튼들
+  .class_mypage_tables {
+    margin: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    a {
+      width: 50%;
+      border: $border;
+      border-radius: 5px;
+      display: flex;
+      background: $dark_color_01;
+      flex-direction: column;
+      align-items: center;
+      padding: 8px 0px 10px;
+    }
+    a:first-child {
+      margin-right: 10px;
+    }
+  }
+
+  // 강의 목록
+  .class_mypage_list {
+    border-radius: 5px;
+    overflow: hidden;
+    border: $border;
+    > div {
+      background: $point_color;
+      color: $main_color;
+      font-size: $font_size_14;
+      font-weight: bold;
+      padding: 6px 10px;
+      border-bottom: $border;
+    }
+    ul {
+      li {
+        color: $dark_color_07;
+        background: $dark_color_01;
+        border-bottom: $border;
+        a{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 12px;
+          &:hover{
+            background: $dark_color_03;
+          }
+        }
+        div {
+          &:first-child {
+            width: 10%;
+          }
+          &:nth-child(2) {
+            width: 100%;
+          }
+        }
+        img{
+          width: 20px;
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
+

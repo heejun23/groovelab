@@ -1,0 +1,98 @@
+@import 'style';
+
+#head p{
+  margin-bottom: 0;
+}
+
+header #gnb{
+  padding-left: 0;
+  .sub_mnu{
+  padding-left: 0;
+  }
+}
+
+// 메인서식
+main{
+  .sign_identify{
+    padding:$moblie_padding375;
+    width: 100%;
+    box-sizing:border-box;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    padding-bottom: 60px;
+    .sign_identify_email_box{
+      margin-top:20px;
+    }
+    .sign_identify_top_box{
+      text-align:center;
+      p{
+        width:230px;
+        margin:0 auto;
+        text-align:center;
+        color:$dark_color_07;
+        line-height:140%; 
+        font-size:$font_size_16;
+      }
+      img{
+        margin-top:30px;
+        width: 94px; height: 94px;
+        object-fit: cover;
+        border-radius: 50%
+      }
+    }
+    #mb_email,#mb_password{
+      @include btn100;
+      background-color: $dark_color_02;
+      border:$border;
+      color:$dark_color_07;
+      font-size:$font-size_14;
+      font-weight:400;
+      text-indent:30px;
+      margin-top:5px;
+    }
+    .sign_identify_pw_box{
+      margin-top:13px;
+    }
+  }
+}
+
+.sign_identify_pw_box, .sign_identify_email_box{
+  position:relative;
+  .sign_identify_pwd, .sign_identify_email{
+    width:22px;
+    position:absolute;
+    top:40px;
+    left:8px;
+  }
+  .sign_identify_pwd{
+    top:38px;
+  }
+  label{
+    color:$dark_color_07;
+  }
+}
+
+// 버튼서식 (돌아가기, 비밀번호 확인)
+.sign_identify_btn{
+  margin-top:30px;
+  display:flex;
+  justify-content:space-between;
+  width:100%;
+  .sign_identify_back_btn{
+    display:block;
+    width:48%;
+    text-align:center;
+    height:50px;
+    line-height:47px;
+    border-radius:5px;
+    border:1px solid $dark_color_07;
+    font-size:$font_size_16;
+  }
+  #sign_identify_pw_check_btn{
+    @include btn100;
+    width:48%;
+    font-weight:bold;
+  }
+
+}
